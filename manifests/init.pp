@@ -74,6 +74,7 @@ class pm2(
     refreshonly => true,
     environment => ["HOME=${install_root}/${install_dir}"],
     command     => 'pm2 status',
+    require     => 'install npm package pm2',
   }
 
   service { 'pm2':
